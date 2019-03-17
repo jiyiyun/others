@@ -1,6 +1,6 @@
 2019年3月15日在huawei eNSP上做OSPF练习，总共开启了6个路由器
 
-![OSPF简单练习] (ospf20190315121433.png)
+![OSPF简单练习](ospf20190315121433.png)
 
 ```txt
 R1
