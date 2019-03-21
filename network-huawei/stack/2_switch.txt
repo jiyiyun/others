@@ -1,0 +1,33 @@
+<huawei>sys
+[huawei]sysname switchA
+[huawei]commit
+[switchA]stack
+[switchA-stack]stack member 1 priprity 200
+[switchA-stack]stack member 1 domain 600
+[switchA-stack]q
+[switchA]commit
+[switchA]interface stack-port 1/1
+[switchA-port 1/1]port member-group interface 40G 1/0/5 to 1/0/6
+[switchA-port 1/1]quit
+[switchA]commit
+[switchA]return
+<switchA>save
+
+SwithB
+<huawei>sys
+[huawei]sysname switchA
+[huawei]commit
+[switchB]stack
+[switchB-stack]stack member 1 priprity 150
+[switchB-stack]stack member 1 domain 600
+[switchB-stack]q
+[switchB]commit
+[switchB]interface stack-port 1/1
+[switchB-port 1/1]port member-group interface 40G 1/0/5 to 1/0/6
+[switchB-port 1/1]quit
+[switchB]commit
+[switchB]return
+<switchB>save
+
+查看
+<switchA>dis stack
