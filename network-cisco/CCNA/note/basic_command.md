@@ -1,3 +1,4 @@
+```txt
 show version
 show flash
 
@@ -12,3 +13,4 @@ debug ip rip        路由调试模式，会有路由更新不断显示在界面
 缺省路由 # ip route 0.0.0.0 0.0.0.0 192.168.20.1
 静态路由 #ip route 172.16.1.0 255.255.255.0 172.16.2.1
 动态缺省路由 #ip default-network 192.168.20.0
+```
