@@ -1,0 +1,17 @@
+router rip
+redistribute ospf 1 metric 3
+
+
+
+router ospf 1
+redistribute rip
+
+
+OSPF默认metric 20,默认只分发主类路由，默认外部链路类型metric-type为2
+
+passive-interface 防止通过路由接口发送路由选择更新，但是仍然接收路由选择更新
+
+  e1/0       e1/0  e1/1     e1/0
+R1---------------R2-------------R3
+     RIP              OSPF
+R2的e1/1接口就是passive-interface
